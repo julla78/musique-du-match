@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Musique du match</title>
+<meta name="theme-color" content="#0A1253">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Musique">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icones/icone-180.png">
+<link rel="icon" href="icones/icone-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+
+  <div class="brand">
+    <button class="home" aria-label="Retour à l’accueil"><img class="logo" alt="" hidden><span class="ballon petit"></span></button>
+    <span class="fmt">MUSIQUE DU MATCH</span>
+    <button class="adult" aria-label="Réglages adulte : appui long"></button>
+  </div>
+
+  <main class="simple"></main>
+
+  <footer class="svol">
+    <span class="vbas"></span>
+    <div class="strack" role="slider" tabindex="0" aria-label="Volume, glisser le doigt" aria-valuemin="1" aria-valuemax="6"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <span class="vhaut"></span>
+  </footer>
+
+  <!-- accueil : sans pack, il propose l'import ; avec un pack, le bouton COMMENCER -->
+  <div class="start">
+    <svg class="court" aria-hidden="true" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#14277A" stroke-width="4"><circle cx="195" cy="0" r="120"/><path d="M0 300H390"/><path d="M95 844V640H295V844"/><path d="M95 640a100 100 0 0 1 200 0"/></svg>
+    <img class="biglogo" alt="" hidden>
+    <span class="ballon grand"></span>
+    <h3>MUSIQUE DU MATCH</h3>
+    <button class="pick go" hidden><span class="goico"></span><span><b>COMMENCER</b><small class="resume"></small></span></button>
+    <label class="pick importer" hidden>
+      <input class="cache fichier-pack" type="file">
+      <span class="impico"></span><span><b>IMPORTER LE PACK</b><small>LE FICHIER REÇU DE LA FAMILLE</small></span>
+    </label>
+    <p class="msg" role="status" aria-live="polite"></p>
+  </div>
+
+  <!-- panneau adulte : appui long sur le cadenas -->
+  <div class="sheet" hidden role="dialog" aria-label="Réglages adulte"><div class="box">
+    <h3>RÉGLAGES ADULTE</h3>
+    <pre class="diag" aria-label="État"></pre>
+
+    <h4>Départ et niveau de chaque son</h4>
+    <p class="aide">▶ pour écouter. Le départ saute le début du fichier ; le niveau monte ou baisse ce son par rapport aux autres. Ces réglages restent sur cet appareil.</p>
+    <div class="reglages"></div>
+    <div class="line"><span>Réglages à envoyer pour le prochain pack</span><button class="copier">Afficher</button></div>
+    <textarea class="export" readonly hidden rows="4" aria-label="Réglages à copier"></textarea>
+
+    <h4>Pack</h4>
+    <div class="line"><span>Remplacer ou compléter les sons</span>
+      <label class="bouton"><input class="cache fichier-pack" type="file">Importer</label></div>
+    <div class="line"><span>Retirer tous les sons de cet appareil</span><button class="effacer">Effacer</button></div>
+    <p class="aide">Les sons copiés sur un appareil y restent : personne ne peut les retirer à distance. Pour les retrouver après un effacement, réimporte le fichier du pack.</p>
+
+    <div class="line"><span></span><button class="close">Fermer</button></div>
+  </div></div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
